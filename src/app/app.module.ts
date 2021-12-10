@@ -1,26 +1,25 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // <-- NgModelÀº ÀÌ ÆÐÅ°Áö°¡ Á¦°øÇÕ´Ï´Ù.
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
-  declarations;
-import { MessagesComponent } from './messages/messages.component': [
+  declarations: [
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
+    MessagesComponent
   ],
   imports: [
-    Brows,
-    MessagesComponenterModule,
-    FormsModule,    
-    AppRoutingModule,
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    // `providedIn`ì„ ì‚¬ìš©í–ˆê¸° ë•Œë¬¸ì— í”„ë¡œë°”ì´ë”ëŠ” ë“±ë¡í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
